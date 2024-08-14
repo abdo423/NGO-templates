@@ -1,10 +1,10 @@
 <div class="p-4">
     <div *ngFor="let faq of faqs; let i = index" class="item px-6 py-6" [ngClass]="{'open': faq.isOpen}">
       <a class="flex items-center justify-between" (click)="toggle(i)">
-        <h4 [ngClass]="{'text-green-400 font-medium': faq.isOpen}">{{ faq.question }}</h4>
+        <h4 [ngClass]="{'text-primary-400 font-medium': faq.isOpen}">{{ faq.question }}</h4>
         <svg
           [ngClass]="{'transform rotate-180': faq.isOpen}"
-          class="w-5 h-5 text-gray-500"
+          class="w-5 h-5 text-secondary-500"
           fill="none" stroke-linecap="round"
           stroke-linejoin="round" stroke-width="2"
           viewBox="0 0 24 24" stroke="currentColor">
