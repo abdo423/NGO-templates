@@ -1,0 +1,23 @@
+/* src/app/about-us/about-us.component.css */
+
+/* Example of additional styling */
+.section-heading {
+    @apply text-4xl font-semibold mb-4;
+  }
+  
+  .team-member {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center;
+  }
+  
+  .team-member img {
+    @apply w-32 h-32 mx-auto rounded-full mb-4;
+  }
+  
+  .team-member h3 {
+    @apply text-xl font-semibold mb-2;
+  }
+  
+  .team-member p {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+  

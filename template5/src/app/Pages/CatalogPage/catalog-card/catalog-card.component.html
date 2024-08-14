@@ -1,0 +1,14 @@
+<div  class="card-container">
+  <div class="rounded-lg h-64 overflow-hidden">
+    <img [src]="item.imgSrc" [alt]="item.imgAlt" class="object-cover object-center h-full w-full">
+  </div>
+  <h2 class="text-xl font-medium title-font text-secondary-900 mt-5">{{ item.title }}</h2>
+  <p class="text-base leading-relaxed mt-2">{{ item.description }}</p>
+  <a [routerLink]="['/donate',item.id]" class="text-primary-500 inline-flex items-center mt-3">
+    {{ item.link.text }}
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+      [attr.stroke-width]="item.link.icon.strokeWidth" class="w-4 h-4 ml-2" [attr.viewBox]="item.link.icon.viewBox">
+      <path [attr.d]="item.link.icon.path"></path>
+    </svg>
+  </a>
+</div>

@@ -1,0 +1,12 @@
+<div  class="bg-white rounded-xl shadow-md overflow-hidden">
+    <div class="relative">
+        <img class="w-full h-48 object-cover" [src]="card.imageSrc" alt="Image description">
+        <div class="absolute top-0 right-0 bg-primary-500 text-white font-bold px-2 py-1 m-2 rounded-md">{{ card.label }}</div>
+        <div class="absolute bottom-0 right-0 bg-secondary-800 text-white px-2 py-1 m-2 rounded-md text-xs">{{ card.readTime }}</div>
+    </div>
+    <div class="p-4">
+        <div class="text-lg font-medium text-secondary-800 mb-2">{{ card.title }}</div>
+        <p class="text-secondary-500 text-sm mb-4">{{ card.description }}</p>
+        <a  [routerLink]="['/donate',card.id]" class="inline-block bg-primary-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-primary-600 transition-colors">{{ card.buttonText }}</a>
+    </div>
+</div>

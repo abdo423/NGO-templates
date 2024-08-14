@@ -1,0 +1,48 @@
+<div class="px-6 py-6 w-full border-2 border-secondary-200 rounded-3xl">
+  <img
+    [src]="card.imageSrc"
+    alt="Image"
+    class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
+  />
+
+  <h4 class="font-semibold text-secondary-900 text-lg md:text-2xl mb-6">
+    {{ card.title }}
+  </h4>
+
+  <p class="font-light text-secondary-400 text-sm md:text-md lg:text-lg mb-10">
+    {{ card.description }}
+  </p>
+
+  <div class="flex items-center justify-between mb-8">
+    <h6 class="font-light text-secondary-400 text-sm md:text-lg">
+      Goals :
+      <span class="font-semibold text-secondary-900 text-md md:text-lg">
+        ${{ card.goal }}
+      </span>
+    </h6>
+    <h6 class="font-light text-secondary-400 text-sm md:text-lg">
+      Raised :
+      <span class="font-semibold text-secondary-900 text-md md:text-lg">
+        ${{ card.raised }}
+      </span>
+    </h6>
+  </div>
+
+  <div class="flex items-center mb-8">
+    <div class="relative flex-1 h-2 bg-gray-200 rounded-lg">
+      <!-- Background bar -->
+      <div
+        class="absolute top-0 left-0 h-full bg-primary-800 rounded-lg"
+        [ngStyle]="{ width: card.percentage + '%' }"
+      ></div>
+    </div>
+    <p class="font-light text-secondary-900 text-md ml-4">{{ card.percentage }}%</p>
+  </div>
+
+  <button
+  [routerLink]="['/donate',card.id]"
+    class="w-full py-4 bg-primary-700 font-semibold text-white text-lg rounded-xl  hover:bg-primary-800 transition ease-in-out duration-500"
+  >
+    Donate
+  </button>
+</div>

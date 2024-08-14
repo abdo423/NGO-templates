@@ -1,0 +1,31 @@
+<section
+  class="hero container mx-auto bg-primary-500 text-white text-center py-10"
+>
+  <h1 class="text-3xl font-bold">Official Documents</h1>
+  <p class="mt-2">
+    Access official documents and publications from our governmental entity.
+  </p>
+</section>
+
+<section
+  class="filters container mx-auto py-6 flex justify-between items-center"
+>
+  <select class="border p-2 rounded">
+    <option value="all">All Categories</option>
+    <option value="finance">Finance</option>
+    <option value="health">Health</option>
+    <!-- Add more categories as needed -->
+  </select>
+  <input type="date" class="border p-2 rounded" />
+  <button class="bg-primary-500 text-white p-2 rounded">Filter</button>
+</section>
+
+<section
+  class="documents container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10"
+>
+  @for( document of documents; track $index) {
+  <app-single-document [document]="document"></app-single-document>
+  }
+
+  <!-- Repeat document-item for each document -->
+</section>

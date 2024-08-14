@@ -1,0 +1,37 @@
+<!-- src/app/footer/footer-section-two/footer-section-two.component.html -->
+<footer class="container mx-auto py-16 px-3 mt-48 mb-8 text-secondary-800">
+  <div class="flex -mx-3">
+    <div class="flex-1 px-3">
+      <h2 class="text-lg font-semibold">{{ footerContent.title }}</h2>
+      <p class="mt-5">
+        <a [routerLink]="footerContent.contactUs.link">{{
+          footerContent.contactUs.text
+        }}</a>
+      </p>
+    </div>
+    <div class="flex-1 px-3">
+      <h2 class="text-lg font-semibold">
+        {{ footerContent.importantLinks.title }}
+      </h2>
+      <ul class="mt-4 leading-loose">
+        @for(link of footerContent.importantLinks.links; track $index){
+        <li>
+          <a [routerLink]="link.route">{{ link.text }}</a>
+        </li>
+        }
+      </ul>
+    </div>
+    <div class="flex-1 px-3">
+      <h2 class="text-lg font-semibold">
+        {{ footerContent.socialMedia.title }}
+      </h2>
+      <ul class="mt-4 leading-loose">
+        @for (social of footerContent.socialMedia.links; track $index){
+        <li>
+          <a [href]="social.route">{{ social.text }}</a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

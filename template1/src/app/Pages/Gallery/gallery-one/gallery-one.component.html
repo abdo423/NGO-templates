@@ -1,0 +1,21 @@
+<!-- gallery.component.html -->
+<div class="text-start p-8">
+    <h2 class="font-bold text-center sm:text-4xl md:text-4xl lg:text-5xl mb-12">
+      Our Gallery
+    </h2>
+    <div class="container mx-auto">
+        @for(item of galleryItems; track $index){
+            <div  class="flex flex-col md:flex-row items-center justify-between mb-16 sm:mb-8">
+                <div class="w-full md:w-1/2 px-4 flex justify-center">
+                  <img [src]="item.imageSrc" [alt]="item.altText" class="rounded-lg shadow-lg border border-gray-300" />
+                </div>
+                <div class="w-full md:w-1/2 px-4 text-center md:text-left mt-8">
+                  <h3 class="font-bold text-xl sm:text-2xl">{{ item.title }}</h3>
+                  <p class="text-base sm:text-lg mt-6 max-w-xs md:max-w-md mx-auto">{{ item.description }}</p>
+                </div>
+              </div>
+            }
+        </div>
+   
+  </div>
+  

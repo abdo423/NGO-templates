@@ -1,0 +1,16 @@
+.item {
+    position: relative;
+  }
+  
+  .item p {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  .item.open p {
+    max-height: 1000px; /* Adjust this value as needed */
+    opacity: 1;
+  }
+  

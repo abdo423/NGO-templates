@@ -1,0 +1,21 @@
+<!-- src/app/features-section/features-section.component.html -->
+<section id="features" class="py-20 lg:pb-40 lg:pt-48">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl lg:text-5xl font-semibold">
+      {{ featuresContent.title }}
+    </h2>
+    <div class="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+      @for( feature of featuresContent.features; track $index){
+      <div class="flex-1 px-3">
+        <div
+          class="p-12 rounded-lg border border-solid border-gray-200 mb-8"
+          style="box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08)"
+        >
+          <p class="font-semibold text-xl">{{ feature.title }}</p>
+          <p class="mt-4">{{ feature.description }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

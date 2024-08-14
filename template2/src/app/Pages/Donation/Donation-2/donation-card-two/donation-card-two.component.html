@@ -1,0 +1,43 @@
+<div class="card bg-light shadow-md rounded-lg overflow-hidden">
+    <div class="relative">
+      <img class="w-full h-60 object-cover" [src]="Card.imageUrl" alt="{{ Card.title }}">
+      <div class="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md">
+        <button class="text-primary-500 hover:text-primary-700">
+          <i class="bi bi-share-fill"></i>
+        </button>
+      </div>
+    </div>
+    <div class="p-4 text-center">
+      <h5 class="text-lg font-semibold">{{ Card.title }}</h5>
+      <a [href]="Card.organization" class="text-decoration-none text-black block mt-2">
+        <p class="text-md">{{ Card.organization }} <span>{{ Card.countryFlag }}</span></p>
+      </a>
+      <div class="my-4">
+        <div class="relative">
+          <div class="w-full bg-secondary-200 rounded-full h-4">
+            <div class="bg-primary-600 h-4 rounded-full" [style.width.%]="getProgressPercentage()"></div>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center text-sm text-black">
+            {{ getProgressPercentage()}}%
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between text-sm">
+        <div class="text-center">
+          <small>Raised</small>
+          <div>{{ Card.raisedAmount }}</div>
+        </div>
+        <div class="text-center">
+          <small>Country</small>
+          <div>{{ Card.countryFlag }}</div>
+        </div>
+        <div class="text-center">
+          <small>Target</small>
+          <div>{{ Card.targetAmount  }}</div>
+        </div>
+      </div>
+      <button (click)="navigateToDetails()" class="btn btn-primary mt-4 w-full rounded-lg">Donate</button>
+
+    </div>
+  </div>
+  

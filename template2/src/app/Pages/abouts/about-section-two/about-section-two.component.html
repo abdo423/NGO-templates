@@ -1,0 +1,51 @@
+<!-- src/app/about-us/about-us.component.html -->
+<section
+  class="bg-secondary-50 dark:bg-secondary-900 text-secondary-800 dark:text-white py-16"
+>
+  <div class="container mx-auto px-4">
+    <!-- Existing About Us Content -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-semibold mb-4">{{ aboutUsContent.title }}</h2>
+      <p class="text-lg leading-relaxed">
+        {{ aboutUsContent.description }}
+      </p>
+    </div>
+
+    <!-- Team Members Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for(member of aboutUsContent.teamMembers; track $index){
+      <div
+        class="bg-white dark:bg-secondary-800 rounded-lg shadow-lg p-6 text-center"
+      >
+        <img
+          class="w-32 h-32 mx-auto rounded-full mb-4 mt-4"
+          [src]="member.imageUrl"
+          alt="Team Member"
+        />
+        <h3 class="text-xl font-semibold mb-2">{{ member.name }}</h3>
+        <p class="text-secondary-600 dark:text-secondary-400">{{ member.title }}</p>
+        <p class="mt-4">{{ member.description }}</p>
+      </div>
+      }
+    </div>
+
+    <!-- New Company Info Section -->
+    <div class="mt-16 lg:mt-20 flex flex-col lg:flex-row items-center gap-8">
+      <div class="lg:w-1/2 lg:pr-8">
+        <img
+          class="w-full h-auto rounded-lg shadow-lg"
+          [src]="aboutUsContent.companyInfo.imageUrl"
+          alt="Company Building"
+        />
+      </div>
+      <div class="lg:w-1/2 mt-8 lg:mt-0">
+        <h2 class="text-3xl font-semibold mb-4">
+          {{ aboutUsContent.companyInfo.heading }}
+        </h2>
+        <p class="text-lg leading-relaxed">
+          {{ aboutUsContent.companyInfo.text }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

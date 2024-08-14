@@ -1,0 +1,17 @@
+<section class="bg-gray-100">
+    <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div class="max-w-lg">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    {{ aboutUsContent[0].heading }}
+                </h2>
+                <p class="mt-4 text-gray-600 text-lg">
+                    {{ aboutUsContent[0].text }}
+                </p>
+            </div>
+            <div class="mt-12 md:mt-0">
+                <img [src]="aboutUsContent[0].imageSrc" alt="About Us Image" class="object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+    </div>
+</section>

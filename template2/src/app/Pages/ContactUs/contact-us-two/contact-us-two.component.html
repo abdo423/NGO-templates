@@ -1,0 +1,46 @@
+<div class="flex items-center justify-center p-12">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="mx-auto w-full max-w-[550px] bg-white">
+        <form action="https://fabform.io/f/{form-id}" method="post">
+            <h1 class="mb-9 text-center text-4xl">Contact Us</h1>
+            <div class="mb-5">
+                <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
+                    {{ formLabels.fullName }}
+                </label>
+                <input type="text" name="name" id="name" [placeholder]="placeholderTexts.fullName"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                    {{ formLabels.emailAddress }}
+                </label>
+                <input type="email" name="email" id="email" [placeholder]="placeholderTexts.emailAddress"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <div class="mb-5">
+                <label for="subject" class="mb-3 block text-base font-medium text-[#07074D]">
+                    {{ formLabels.subject }}
+                </label>
+                <input type="text" name="subject" id="subject" [placeholder]="placeholderTexts.subject"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <div class="mb-5">
+                <label for="message" class="mb-3 block text-base font-medium text-[#07074D]">
+                    {{ formLabels.message }}
+                </label>
+                <textarea rows="4" name="message" id="message" [placeholder]="placeholderTexts.message"
+                    class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+            </div>
+            <div>
+                <button
+                    class="hover:shadow-form rounded-md bg-primary-700 py-3 px-8 text-base font-semibold text-white outline-none">
+                    {{ buttonText }}
+                </button>
+            </div>
+        </form>
+        <a [href]="emailLinkUrl" class="font-medium text-blue-600 hover:underline">
+            {{ emailLinkText }}
+        </a>
+    </div>
+</div>

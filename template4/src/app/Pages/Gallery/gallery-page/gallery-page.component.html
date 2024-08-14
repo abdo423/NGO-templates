@@ -1,0 +1,26 @@
+<!-- src/app/gallery-section/gallery-section.component.html -->
+<section class="w-full mx-auto py-10 bg-secondary-50 dark:bg-secondary-900 dark:text-white">
+    <div class="w-fit pb-1 px-2 mx-4 rounded-md text-4xl font-semibold border-b-2 border-primary-600 dark:border-b-2 dark:border-yellow-600 text-center">
+      {{ galleryContent.title }}
+    </div>
+    <div class="container mx-auto">
+      <div *ngFor="let section of galleryContent.sections; let isOdd = odd" class="xl:w-[80%] sm:w-[85%] xs:w-[90%] mx-auto flex md:flex-row xs:flex-col lg:gap-4 xs:gap-2 justify-center lg:items-stretch md:items-center mt-4" [ngClass]="{'flex-row-reverse': !section.isImageFirst}">
+        <div [ngClass]="{'lg:w-[50%] xs:w-full': true}">
+          <img
+            [src]="section.imageUrl"
+            alt="Gallery image"
+            class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm"
+          />
+        </div>
+        <div class="lg:w-[50%] sm:w-full xs:w-full bg-secondary-100 dark:bg-secondary-900 dark:text-secondary-400 md:p-4 xs:p-0 rounded-md">
+          <h2 class="text-3xl font-semibold text-secondary-900 dark:text-white">
+            {{ section.heading }}
+          </h2>
+          <p class="text-md mt-4">
+            {{ section.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
