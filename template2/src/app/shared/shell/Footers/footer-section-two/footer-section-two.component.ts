@@ -9,8 +9,10 @@ import { RouterLink } from '@angular/router';
   templateUrl: './footer-section-two.component.html',
   styleUrl: './footer-section-two.component.css'
 })
-export class FooterSectionTwoComponent  {
+export class FooterSectionTwoComponent implements OnInit  {
   footerContent = footerContent;
-
-
+  currentYear: number = 0;
+  ngOnInit(): void {
+    this.currentYear = new Date().getFullYear();
+  }
 }

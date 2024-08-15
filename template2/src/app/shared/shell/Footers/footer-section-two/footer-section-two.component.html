@@ -1,37 +1,86 @@
-<!-- src/app/footer/footer-section-two/footer-section-two.component.html -->
-<footer class="container mx-auto py-16 px-3 mt-48 mb-8 text-secondary-800">
-  <div class="flex -mx-3">
-    <div class="flex-1 px-3">
-      <h2 class="text-lg font-semibold">{{ footerContent.title }}</h2>
-      <p class="mt-5">
-        <a [routerLink]="footerContent.contactUs.link">{{
-          footerContent.contactUs.text
-        }}</a>
-      </p>
+<footer class="relative bg-secondary-200 pt-8 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap text-left lg:text-left">
+      <!-- Contact Section -->
+      <div class="w-full lg:w-6/12 px-4 mb-8 lg:mb-0">
+        <h4 class="text-3xl font-semibold text-secondary-700">
+          Let's keep in touch!
+        </h4>
+        <h5 class="text-lg mt-0 mb-2 text-secondary-600">
+          Find us on any of these platforms, we respond 1-2 business days.
+        </h5>
+        <div class="mt-6 lg:mb-0 mb-6 flex">
+          <a routerLink="https://twitter.com/HuntaroSan" aria-label="Twitter">
+            <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-twitter"></i>
+            </button>
+          </a>
+          <a routerLink="https://facebook.com" aria-label="Facebook">
+            <button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-facebook-square"></i>
+            </button>
+          </a>
+          <a routerLink="https://dribbble.com" aria-label="Dribbble">
+            <button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-dribbble"></i>
+            </button>
+          </a>
+          <a routerLink="https://github.com" aria-label="GitHub">
+            <button class="bg-white text-secondary-800 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <i class="fab fa-github"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- Useful Links Section -->
+      <div class="w-full lg:w-6/12 px-4">
+        <div class="flex flex-wrap items-top mb-6">
+          <div class="w-full lg:w-4/12 px-4 ml-auto">
+            <span class="block uppercase text-secondary-500 text-sm font-semibold mb-2">Useful Links</span>
+            <ul class="list-unstyled">
+              <li>
+                <a routerLink="/about" class="text-secondary-600 hover:text-secondary-800 font-semibold block pb-2 text-sm">About Us</a>
+              </li>
+              <li>
+                <a routerLink="/blog" class="text-secondary-600 hover:text-secondary-800 font-semibold block pb-2 text-sm">Blog</a>
+              </li>
+              <li>
+                <a routerLink="/github" class="text-secondary-600 hover:text-secondary-800 font-semibold block pb-2 text-sm">Github</a>
+              </li>
+              <li>
+                <a routerLink="/free-products" class="text-secondary-600 hover:text-secondary-800 font-semibold block pb-2 text-sm">Free Products</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Other Resources Section -->
+          <div class="w-full lg:w-4/12 px-4">
+            <span class="block uppercase text-secondary-500 text-sm font-semibold mb-2">Other Resources</span>
+            <ul class="list-unstyled">
+              <li>
+                <a routerLink="/FAQ" class="text-secondary-600 hover:text-secondary-800 font-semibold block pb-2 text-sm">FAQs</a>
+              </li>
+              <li>
+                <a routerLink="/Terms" class="text-secondary-600 hover:text-secondary-800 font-semibold block pb-2 text-sm">Terms & Conditions</a>
+              </li>
+              <li>
+                <a routerLink="/contact-us" class="text-secondary-600 hover:text-secondary-800 font-semibold block pb-2 text-sm">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="flex-1 px-3">
-      <h2 class="text-lg font-semibold">
-        {{ footerContent.importantLinks.title }}
-      </h2>
-      <ul class="mt-4 leading-loose">
-        @for(link of footerContent.importantLinks.links; track $index){
-        <li>
-          <a [routerLink]="link.route">{{ link.text }}</a>
-        </li>
-        }
-      </ul>
-    </div>
-    <div class="flex-1 px-3">
-      <h2 class="text-lg font-semibold">
-        {{ footerContent.socialMedia.title }}
-      </h2>
-      <ul class="mt-4 leading-loose">
-        @for (social of footerContent.socialMedia.links; track $index){
-        <li>
-          <a [href]="social.route">{{ social.text }}</a>
-        </li>
-        }
-      </ul>
+    <hr class="my-6 border-secondary-300" />
+    <div class="flex flex-wrap items-center md:justify-between justify-center">
+      <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div class="text-sm text-secondary-500 font-semibold py-1">
+          Copyright © <span>{{ currentYear }}</span>
+          <a routerLink="https://creative-tim.com" class="text-secondary-500 hover:text-gray-800" target="_blank">
+            Notus JS by
+            <span class="text-secondary-500 hover:text-secondary-800">Creative Tim</span>
+          </a>.
+        </div>
+      </div>
     </div>
   </div>
 </footer>

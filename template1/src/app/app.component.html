@@ -1,4 +1,6 @@
-<app-nav-one></app-nav-one>
-<router-outlet> </router-outlet>
-<app-footer-section></app-footer-section>
-<app-scroll-to-top></app-scroll-to-top>
+<div dir="{{ translationService.getDirection() }}">
+    <app-nav-one></app-nav-one>
+    <router-outlet> </router-outlet>
+    <app-footer-section></app-footer-section>
+    <app-scroll-to-top></app-scroll-to-top>
+</div>
