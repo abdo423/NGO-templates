@@ -14,8 +14,11 @@ module.exports = {
       xl: "1440px",
     },
     extend: {
+    
       colors: {
         primary: {
+          50: "#eff6ff",
+          100: "#dbeafe",
           200: "#bfdbfe",
           400:"#4ade80",
           500: "#3b82f6",

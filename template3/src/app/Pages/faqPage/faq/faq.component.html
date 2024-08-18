@@ -15,9 +15,12 @@
             </div>
           </div>
           <div class="md:w-2/3 py-12">
-            <div class="p-4">
-              <app-faq-content></app-faq-content>
-            </div>
+            @for( faq of faqs.slice(1); track $index) {
+              <div class="p-4">
+                <app-faq-content [faqs]="faq"></app-faq-content>
+              </div>
+            }
+         
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
   <img
     [src]="card.imageSrc"
     alt="Image"
-    class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
+    class="mb-6 hover:opacity-75 transition ease-in-out duration-500 mx-auto"
   />
 
   <h4 class="font-semibold text-secondary-900 text-lg md:text-2xl mb-6">
@@ -40,7 +40,7 @@
   </div>
 
   <button
-  [routerLink]="['/donate',card.id]"
+   [routerLink]="[translationService.getURL('/donate'),card.id]"
     class="w-full py-4 bg-primary-700 font-semibold text-white text-lg rounded-xl  hover:bg-primary-800 transition ease-in-out duration-500"
   >
     Donate

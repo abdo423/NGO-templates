@@ -1,16 +1,16 @@
 <div
-  class="accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50"
+  class="accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 hover:cursor-pointer"
+  (click)="toggleAccordion()"
 >
   <button
     class="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600"
-    (click)="toggleAccordion()"
     aria-controls="accordion-content"
     [attr.aria-expanded]="isOpen"
   >
-    <h5>How do I update my billing information?</h5>
+    <h5>{{ accordionContent.question }}</h5>
     <svg
       class="text-gray-500 transition duration-500 group-hover:text-indigo-600"
-      [ngClass]="{'rotate-180': isOpen}"
+      [ngClass]="{ 'rotate-180': isOpen }"
       width="22"
       height="22"
       viewBox="0 0 22 22"
@@ -29,13 +29,11 @@
   <div
     id="accordion-content"
     class="accordion-content w-full px-0 overflow-hidden transition-max-height duration-500"
-    [ngStyle]="{'max-height': isOpen ? '250px' : '0'}"
+    [ngStyle]="{ 'max-height': isOpen ? '250px' : '0' }"
     aria-labelledby="accordion-heading"
   >
     <p class="text-base text-gray-900 leading-6">
-      To contact customer support, look for a 'Contact us' or 'Help'
-      button or link on the website or platform. You may be able to
-      email, call, or chat with customer support for assistance.
+      {{ accordionContent.answer }}
     </p>
   </div>
 </div>

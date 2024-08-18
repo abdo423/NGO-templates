@@ -15,6 +15,7 @@ import { LandingPageOneComponent } from './Pages/landing-page-one/landing-page-o
 
 
 export const routes: Routes = [
+    //en routes
     {path: '', component: LandingPageOneComponent},
     {path:'about', component:AboutSectionOneComponent },
     {path:'FAQ',component: FaqOneComponent},
@@ -24,5 +25,18 @@ export const routes: Routes = [
     {path:'contact-us',component:ContactUsOneComponent},
     {path:'Gallery',component:GalleryOneComponent},
     {path:'Docs',component:DocumentPageComponent},
-    {path: '**', component:NotFoundPageComponent}
+    //ar routes
+    {path: 'ar', component: LandingPageOneComponent},
+    {path:'ar/about', component:AboutSectionOneComponent },
+    {path:'ar/FAQ',component: FaqOneComponent},
+    {path:'ar/Terms',component:TermsAndCondationsComponent},
+    {path:'ar/charities',component:DonationHolderComponent},
+    {path:'ar/donate/:id',component:DonationDetailsComponent},
+    {path:'ar/contact-us',component:ContactUsOneComponent},
+    {path:'ar/Gallery',component:GalleryOneComponent},
+    {path:'ar/Docs',component:DocumentPageComponent},
+    //404
+    {path: 'ar/**', component:NotFoundPageComponent},
+    {path: '**', component:NotFoundPageComponent},
+
 ];

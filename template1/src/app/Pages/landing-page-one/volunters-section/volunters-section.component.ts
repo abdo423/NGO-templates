@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../../../shared/translation/translation.service';
 
 @Component({
   selector: 'app-volunters-section',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './volunters-section.component.css'
 })
 export class VoluntersSectionComponent {
-
+  volunters: any;
+  constructor(transilationService: TranslationService) {
+    this.volunters = transilationService.getTranslation().voluntersSection;
+  }
 }

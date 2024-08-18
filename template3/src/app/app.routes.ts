@@ -13,6 +13,7 @@ import { LandingPageThreeComponent } from './Pages/landing-page-three/landing-pa
 
 
 export const routes: Routes = [
+    //en routes
     {path: '', component: LandingPageThreeComponent},
     {path:'about', component:AboutUsSectionThreeComponent },
     {path:'FAQ',component: FaqComponent},
@@ -22,5 +23,18 @@ export const routes: Routes = [
     {path:'contact-us',component:ContactUsThreeComponent},
     {path:'Gallery',component:GalleryThreeComponent},
     {path: 'Docs',component: DocumentPageComponent},
+    //ar routes
+    {path: 'ar', component: LandingPageThreeComponent},
+    {path:'ar/about', component:AboutUsSectionThreeComponent },
+    {path:'ar/FAQ',component: FaqComponent},
+    {path:'ar/Terms',component:TermsAndCondationsComponent},
+     {path:'ar/charities',component:CatalogComponent},
+    {path:'ar/donate/:id',component:ProductComponent},
+    {path:'ar/contact-us',component:ContactUsThreeComponent},
+    {path:'ar/Gallery',component:GalleryThreeComponent},
+    {path: 'ar/Docs',component: DocumentPageComponent},
+    //404
+
+    {path: 'ar/**', component:NotFoundPageComponent},
     {path: '**', component:NotFoundPageComponent},
 ];

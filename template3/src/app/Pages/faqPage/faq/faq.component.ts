@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FaqContentComponent } from '../faq-content/faq-content.component';
+import { Component, Input } from '@angular/core';
+import { FaqContentComponent } from '../../../shared/Components/faq-content/faq-content.component';
+import { TranslationService } from '../../../shared/translation/translation.service';
 
 @Component({
   selector: 'app-faq',
@@ -10,5 +11,9 @@ import { FaqContentComponent } from '../faq-content/faq-content.component';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent {
- 
+  faqs :any;
+  constructor(transilationService:TranslationService){
+    this.faqs = transilationService.getTranslation().faq;
+
+  }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FeaturesOne } from '../../../shared/data/en/firstLandingPage/FeaturesOne';
+import { FeaturesOne } from '../../../shared/translation/languages/en/FeaturesOne';
+import { TranslationService } from '../../../shared/translation/translation.service';
 @Component({
   selector: 'app-features',
   standalone: true,
@@ -8,5 +9,8 @@ import { FeaturesOne } from '../../../shared/data/en/firstLandingPage/FeaturesOn
   styleUrl: './features.component.css'
 })
 export class FeaturesComponent {
-  featuresData =  FeaturesOne;
+  featuresOne :any;
+  constructor(transilationService: TranslationService) {
+    this.featuresOne = transilationService.getTranslation().featuresSection;
+  }
 }

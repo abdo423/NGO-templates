@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-faq-content',
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class FaqContentComponent {
   isOpen: boolean = false;
-
+  @Input() accordionContent: any;
   toggleAccordion() {
     this.isOpen = !this.isOpen;
   }

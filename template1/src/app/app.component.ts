@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavOneComponent } from './shared/shell/nav-one/nav-one.component';
 import { FooterSectionComponent } from './shared/shell/footer-section/footer-section.component';
 import { ScrollToTopComponent } from './shared/Components/scroll-to-top/scroll-to-top.component';
+import { TranslationService } from './shared/translation/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -22,4 +23,5 @@ import { ScrollToTopComponent } from './shared/Components/scroll-to-top/scroll-t
 })
 export class AppComponent {
   // Component logic here
+  constructor(public translationService: TranslationService) { }
 }

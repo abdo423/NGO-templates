@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { aboutUsContent } from '../../shared/data/en/firstLandingPage/aboutUsOne';
+import { aboutUsContent } from '../../shared/translation/languages/en/aboutUsOne';
+import { TranslationService } from '../../shared/translation/translation.service';
 @Component({
   selector: 'app-about-section-one',
   standalone: true,
@@ -9,5 +10,8 @@ import { aboutUsContent } from '../../shared/data/en/firstLandingPage/aboutUsOne
   styleUrl: './about-section-one.component.css'
 })
 export class AboutSectionOneComponent {
-  aboutUsContent = aboutUsContent;
+  aboutUsContent :any;
+  constructor(transilationService: TranslationService) {
+    this.aboutUsContent = transilationService.getTranslation().aboutSection;
+  }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CatalogCardComponent } from '../../shared/Components/catalog-card/catalog-card.component';
+import { TranslationService } from '../../shared/translation/translation.service';
 
 @Component({
   selector: 'app-catalog',
@@ -9,72 +10,8 @@ import { CatalogCardComponent } from '../../shared/Components/catalog-card/catal
   styleUrl: './catalog.component.css'
 })
 export class CatalogComponent {
-  cards = [
-    {
-      id: 1,
-      imageSrc: 'https://via.placeholder.com/600x360',
-      label: 'New',
-      readTime: '3 min read',
-      title: 'Title',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.',
-     
-      buttonText: 'Learn More',
-    },
-    {
-      id: 2,
-      imageSrc: 'https://via.placeholder.com/600x360',
-      label: 'New',
-      readTime: '3 min read',
-      title: 'Title',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.',
-   
-      buttonText: 'Learn More',
-    },
-    {
-      id: 3,
-      imageSrc: 'https://via.placeholder.com/600x360',
-      label: 'New',
-      readTime: '3 min read',
-      title: 'Title',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.',
-  
-      buttonText: 'Learn More',
-    },
-    {
-      id: 4,
-      imageSrc: 'https://via.placeholder.com/600x360',
-      label: 'New',
-      readTime: '3 min read',
-      title: 'Title',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.',
-     
-      buttonText: 'Learn More',
-    },
-    {
-      id: 5,
-      imageSrc: 'https://via.placeholder.com/600x360',
-      label: 'New',
-      readTime: '3 min read',
-      title: 'Title',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.',
-     
-      buttonText: 'Learn More',
-    },
-    {
-      id: 1,
-      imageSrc: 'https://via.placeholder.com/600x360',
-      label: 'New',
-      readTime: '3 min read',
-      title: 'Title',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, mi sed egestas tincidunt, libero dolor bibendum nisl, non aliquam quam massa id lacus.',
-    
-      buttonText: 'Learn More',
-    },
-  ];
+catalog :any;
+constructor(public translationService:TranslationService){
+ this.catalog = this.translationService.getTranslation().catalog;
+}
 }

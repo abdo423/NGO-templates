@@ -1,150 +1,78 @@
+
+import { aboutUsContent } from "./aboutUsOne";
+import { achivmentsOne } from "./achivmentsOne";
+import { CONTACT_FORM_TEXT } from "./ContactUsOne";
+import { donationCards } from "./DonationCardOne";
+import { blogPostContent } from "./DonationDetails";
+import { faqContent } from "./FaqOne";
+
+import { HeroOne } from "./HeroOne";
+import { NavOne } from "./NavOne";
+import { FeaturesOne } from "./FeaturesOne";
+import { galleryItems } from "./GalleryOne";
+import { voluntersSection } from "./volunters";
+import { footerContent } from "./FooterOne";
+import { privacyPolicyContent } from "./termsAndCondations";
+import { documents } from "./Documents";
+
 export const translation = {
-  home: 'الرئيسية',
-  about: 'من نحن',
-  aboutUs: 'معلومات عنا',
-  contact: 'تواصل',
-  contactUs: 'تواصل معنا',
-  gellary: 'معرض الصور',
-  docs: 'الوثائق',
-  faq: 'الأسئلة الشائعة',
-  catalog: 'كاتالوج',
-  product: 'المنتج',
-  ltDonate: 'أحدث من تبرع',
-  policy: 'سياسة الخصوصية',
-  action: 'فعل',
-  navbar: {
-    menu: [
-      { title: 'من نحن', route: 'about' },
-      { title: 'تواصل معنا', route: 'contact' },
-      { title: 'معرض الصور', route: 'gellary' },
-      { title: 'كاتالوج', route: 'catalog' },
-      { title: 'الوثائق', route: 'docs' },
-    ]
-  },
-  aboutSection: {
-    title: 'منظمة التبرعات للأطفال المحتاجين للدعم والمساعدة',
-    desc: 'الهدف الرئيسي هو التركيز على تثقيف الحاضرين حول كيفية حماية التطبيقات التجارية الهامة من خلال مناقشات تفاعلية وجلسات مائدة مستديرة يقودها خبراء في الموضوع.',
-    action: 'اعرف المزيد',
-    years: '04',
-  },
-  contactSection: {
-    mainTitle: 'تواصل معنا',
-    subTitle: 'دعنا نتحدث عن مشكلتك.',
-    location: 'موقعنا',
-    address: '401 Broadway, الطابق 24، Orchard Cloud View، لندن',
-    help: 'كيف يمكننا مساعدتك؟',
-    form: {
-      title: 'أرسل لنا رسالة',
-      name: 'الاسم الكامل',
-      email: 'البريد الإلكتروني',
-      phone: 'الهاتف',
-      message: 'الرسالة',
-      submit: 'إرسال',
-    }
-  },
-  ctaSection: {
-    title: "ماذا تبحث عن؟ ابدأ الآن!",
-    desc: "نحن نقدم مجموعة واسعة من الخدمات لمساعدتك في بدء عملك.",
-    action: "ابدأ",
-  },
+  home: 'Home',
+  about: 'About',
+  aboutUs: 'About Us',
+  contact: 'Contact',
+  contactUs: 'Contact Us',
+  gellary: 'Gellary',
+  docs: 'Documents',
+  faq: 'FAQ',
+  catalog: 'Catalog',
+  product: 'Product',
+  ltDonate: 'Latest to donate',
+  policy: 'Privacy Policy',
+  action: 'Action',
+  navbar: NavOne,
+  aboutSection: aboutUsContent,
+  contactSection:CONTACT_FORM_TEXT ,
   docsSection: {
-    title: 'مجموعة أدوات رائعة لبناء موقع ويب متطور بسرعة.',
-    desc: 'الهدف الرئيسي هو التركيز على تثقيف الحاضرين حول كيفية حماية التطبيقات التجارية الهامة من خلال مناقشات تفاعلية وجلسات مائدة مستديرة يقودها خبراء في الموضوع. الهدف الرئيسي هو التركيز على تثقيف الحاضرين حول كيفية حماية التطبيقات التجارية الهامة من خلال مناقشات تفاعلية.',
-    action: "اعرف المزيد",
+    title: 'Brilliant Toolkit to Build Nextgen Website Faster.',
+    desc: 'The main ‘thrust\' is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables led by subject matter experts. The main ‘thrust\' is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel.',
+    action: "Know More",
   },
-  donationsSection: {
-    goals: 'الأهداف: ',
-    raised: 'المبلغ المجموع: ',
-    donate: 'تبرع',
-    more: 'المزيد للتبرع',
-    programs: [
-      {
-        id: 1,
-        title: "مساعدة ضحايا الفيضانات في إندونيسيا",
-        description: "ساعدنا في توفير الغذاء والمأوى لضحايا الفيضانات في إندونيسيا.",
-        image: "assets/image/donation-1.png",
-        raised: 10000,
-        target: 20000,
-        percentage: 50,
-      },
-      {
-        id: 2,
-        title: "دعم التعليم في إفريقيا",
-        description: "ساعدنا في بناء المدارس وتوفير التعليم للأطفال في إفريقيا.",
-        image: "assets/image/donation-2.png",
-        raised: 5000,
-        target: 10000,
-        percentage: 50,
-      },
-      {
-        id: 3,
-        title: "دعم التعليم في إفريقيا",
-        description: "ساعدنا في بناء المدارس وتوفير التعليم للأطفال في إفريقيا.",
-        image: "assets/image/donation-3.png",
-        raised: 5000,
-        target: 10000,
-        percentage: 50,
-      },
-    ]
-  },
-  faqSection: {
-    mainTitle: 'الأسئلة الشائعة',
-    subTitle: 'أي أسئلة؟ ابحث هنا',
-    desc: 'توجد العديد من نسخ نصوص لوريم إيبسوم المتاحة، ولكن الغالبية تعرضت لتغيير ما بشكل أو بآخر.',
-    questions: [
-      {
-        id: 1,
-        question: "ما هو هدف هذا الموقع؟",
-        answer: "هذا الموقع هو موقع توضيحي لمنظمة غير ربحية. تم بناء الموقع باستخدام Angular و Bootstrap. يعرض الموقع البرامج المختلفة التي تديرها المنظمة ويسمح للزوار بالتبرع لهذه البرامج."
-      },
-      {
-        id: 2,
-        question: "كيف يمكنني التبرع لبرنامج؟",
-        answer: "للتبرع لأحد البرامج، اضغط على زر 'تبرع' في بطاقة البرنامج. ستنتقل إلى نموذج التبرع حيث يمكنك إدخال المبلغ الذي ترغب في التبرع به وتفاصيل الدفع الخاصة بك."
-      },
-      {
-        id: 3,
-        question: "كيف يمكنني الاتصال بالمنظمة؟",
-        answer: "يمكنك الاتصال بالمنظمة عن طريق النقر على رابط 'اتصل بنا' في تذييل الموقع. يمكنك أيضًا إرسال بريد إلكتروني إلى"
-      },
-      {
-        id: 4,
-        question: "كيف يمكنني الاتصال بالمنظمة؟",
-        answer: "يمكنك الاتصال بالمنظمة عن طريق النقر على رابط 'اتصل بنا' في تذييل الموقع. يمكنك أيضًا إرسال بريد إلكتروني إلى"
-      },
-    ]
-  },
+  donationsDetailsSection:blogPostContent,
+  donationCard:donationCards,
+  faqSection: faqContent,
   offersSection: {
-    mainTitle: 'العروض',
-    subTitle: 'ما نقدمه',
-    desc: 'نحن هنا لمساعدتك',
-    action: 'تعرف على المزيد',
+    mainTitle: 'Offers',
+    subTitle: 'What We Offer',
+    desc: 'We are here to help you',
+    action: 'Learn More',
     offers: [
       {
-        title: 'عرض 1',
-        desc: 'الوصف 1'
+        title: 'Offer 1',
+        desc: 'Description 1'
       },
       {
-        title: 'عرض 2',
-        desc: 'الوصف 2'
+        title: 'Offer 2',
+        desc: 'Description 2'
       },
       {
-        title: 'عرض 3',
-        desc: 'الوصف 3'
+        title: 'Offer 3',
+        desc: 'Description 3'
       },
     ]
   },
-  heroSection: {
-    mainTitle: 'منظمة التبرعات للأطفال المحتاجين للدعم والمساعدة',
-    subTitle: 'نحن هنا لمساعدتك',
-    action1: 'تبرع الآن',
-    action2: 'اتصل بنا',
-  },
+  heroSection: HeroOne,
+  achivmentsSection: achivmentsOne,
+  footerSection: footerContent,
+  featuresSection: FeaturesOne,
+  gallerySection : galleryItems,
   errorPage: {
-    mainTitle: 'خطأ',
-    subTitle: 'خطأ',
-    desc: 'عذراً، لم نتمكن من العثور على الصفحة التي تبحث عنها.',
-    action1: 'العودة للصفحة الرئيسية',
-    action2: 'تواصل مع الدعم',
+    mainTitle: 'Not Found',
+    subTitle: 'Page not found',
+    desc: 'Sorry, we couldn’t find the page you’re looking for.',
+    action1: 'Go back home',
+    action2: 'Contact support',
   },
+  voluntersSection: voluntersSection,
+  TermsAndCondations:privacyPolicyContent,
+  documents:documents,
 }

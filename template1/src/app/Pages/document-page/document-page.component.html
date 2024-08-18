@@ -1,16 +1,16 @@
 <section
   class="hero container mx-auto bg-primary-500 text-white text-center py-10"
 >
-  <h1 class="text-3xl font-bold">Official Documents</h1>
+  <h1 class="text-3xl font-bold">{{documents[0].docsTitle}}</h1>
   <p class="mt-2">
-    Access official documents and publications from our governmental entity.
+   {{documents[0].docsDescription}}
   </p>
 </section>
 
 <section
   class="documents container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10"
 >
-  @for( document of documents; track $index) {
+  @for( document of documents.slice(2); track $index) {
   <app-single-document [document]="document"></app-single-document>
   }
 

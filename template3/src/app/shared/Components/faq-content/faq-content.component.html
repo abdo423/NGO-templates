@@ -1,0 +1,18 @@
+<div class="p-4" (click)="toggleAccordion()">
+  <div class="item px-6 py-6" [ngClass]="{'open': isOpen}">
+    <a class="flex items-center justify-between">
+      <h4 [ngClass]="{'text-primary-400 font-medium': isOpen}">{{ faqs.question }}</h4>
+      <svg
+        [ngClass]="{'transform rotate-180': isOpen}"
+        class="w-5 h-5 text-secondary-500"
+        fill="none" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </a>
+    <div *ngIf="isOpen" class="mt-3">
+      <p>{{ faqs.answer }}</p>
+    </div>
+  </div>
+</div>

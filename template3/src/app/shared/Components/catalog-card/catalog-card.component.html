@@ -7,6 +7,6 @@
     <div class="p-4">
         <div class="text-lg font-medium text-secondary-800 mb-2">{{ card.title }}</div>
         <p class="text-secondary-500 text-sm mb-4">{{ card.description }}</p>
-        <a  [routerLink]="['/donate',card.id]" class="inline-block bg-primary-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-primary-600 transition-colors">{{ card.buttonText }}</a>
+        <a   [routerLink]="[translationsService.getURL('/donate'),card.id]" class="inline-block bg-primary-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-primary-600 transition-colors">{{ card.buttonText }}</a>
     </div>
 </div>
