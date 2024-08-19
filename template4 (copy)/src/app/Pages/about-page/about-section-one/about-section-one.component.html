@@ -1,9 +1,9 @@
 <div class="flex flex-col lg:flex-row mb-12">
     <div class="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
-      <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
-      <p class="text-secondary-700">Our mission is to deliver exceptional services and innovative solutions to our clients. We are committed to excellence, integrity, and continuous improvement in everything we do. Our team works collaboratively to achieve common goals and exceed expectations.</p>
+      <h2 class="text-3xl font-semibold mb-4">{{sectionOne.title}}</h2>
+      <p class="text-secondary-700">{{sectionOne.description}}</p>
     </div>
     <div class="lg:w-1/2">
-      <img src="https://dummyimage.com/500x300" alt="Our Mission" class="w-full h-auto rounded-lg shadow-md">
+      <img [src]="sectionOne.imageUrl" alt="Our Mission" class="w-full h-auto rounded-lg shadow-md">
     </div>
   </div>

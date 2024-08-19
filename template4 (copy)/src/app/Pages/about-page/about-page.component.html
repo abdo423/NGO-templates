@@ -1,13 +1,13 @@
 <section class="about-us-section bg-secondary-100 py-16">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold mb-4">About Us</h1>
+      <h1 class="text-4xl font-bold mb-4">{{aboutPage.title}}</h1>
       <p class="text-lg text-secondary-600">
-        Learn more about who we are, what we do, and our mission.
+        {{aboutPage.description}}
       </p>
     </div>
-    <app-about-section-one></app-about-section-one>
-    <app-about-section-two></app-about-section-two>
-    <app-about-section-three></app-about-section-three>
+    <app-about-section-one [sectionOne]="aboutPage.sectionOne"></app-about-section-one>
+    <app-about-section-two [sectionTwo]="aboutPage.sectionTwo"></app-about-section-two>
+    <app-about-section-three [sectionThree]="aboutPage.sectionThree"></app-about-section-three>
   </div>
 </section>

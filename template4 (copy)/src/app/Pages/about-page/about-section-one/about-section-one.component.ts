@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-about-section-one',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './about-section-one.component.css'
 })
 export class AboutSectionOneComponent {
-
+@Input() sectionOne: any;
 }

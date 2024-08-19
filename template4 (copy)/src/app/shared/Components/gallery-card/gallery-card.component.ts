@@ -7,12 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './gallery-card.component.html',
   styleUrl: './gallery-card.component.css',
 })
-export class GalleryCardComponent implements OnInit {
+export class GalleryCardComponent  {
   @Input() gallery: any;
   constructor() {
     // Component
   }
-  ngOnInit(): void {
-    console.log(this.gallery);
-  }
+
 }

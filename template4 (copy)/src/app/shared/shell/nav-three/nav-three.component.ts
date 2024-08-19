@@ -13,14 +13,14 @@ import { navbar } from '../../translation/languages/en/navbar';
 })
 export class NavThreeComponent {
   headerContent:any;
-    isMenuOpen = false;
+    isNavOpen = false;
     constructor(public translationService: TranslationService) {
     
 
    
      }
     
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
+     toggleNav() {
+      this.isNavOpen = !this.isNavOpen;
     }
 }

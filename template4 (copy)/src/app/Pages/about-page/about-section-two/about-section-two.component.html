@@ -1,24 +1,17 @@
 <div class="text-center mb-12">
-    <h2 class="text-3xl font-semibold mb-4">Our History</h2>
-    <p class="text-secondary-700 mb-8">Founded in [Year], our company has grown from a small startup into a leading provider of [Industry/Service]. Over the years, we have achieved numerous milestones and continue to innovate and expand our offerings to meet the needs of our clients.</p>
-    <div class="flex flex-wrap justify-center">
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <h3 class="text-xl font-semibold mb-2">Year 1</h3>
-          <p class="text-secondary-600">Launched our first product and gained initial traction in the market.</p>
+  <h2 class="text-3xl font-semibold mb-4">{{ sectionTwo.title }}</h2>
+  <p class="text-secondary-700 mb-8">{{ sectionTwo.description }}</p>
+  <div class="flex flex-wrap justify-center">
+    @for( year of sectionTwo.years; track $index){
+    
+        <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h3 class="text-xl font-semibold mb-2">{{ year.year }}</h3>
+            <p class="text-secondary-600">{{ year.description }}</p>
+          </div>
         </div>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <h3 class="text-xl font-semibold mb-2">Year 3</h3>
-          <p class="text-secondary-600">Expanded our operations and introduced new services to meet growing demand.</p>
-        </div>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <h3 class="text-xl font-semibold mb-2">Year 5</h3>
-          <p class="text-secondary-600">Achieved significant industry recognition and expanded into new markets.</p>
-        </div>
-      </div>
-    </div>
+     
+    }
+  
   </div>
+</div>

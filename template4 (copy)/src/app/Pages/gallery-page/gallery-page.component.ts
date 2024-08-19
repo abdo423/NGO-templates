@@ -15,7 +15,7 @@ export class GalleryPageComponent {
   gallery:any;
   constructor(translationsService: TranslationService) {
     this.gallery = translationsService.getTranslation().gallery;
-    console.log(this.gallery.items);
+  
    
   }
 // src/app/gallery-content.ts

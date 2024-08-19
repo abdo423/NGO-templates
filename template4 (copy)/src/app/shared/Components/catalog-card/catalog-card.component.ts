@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslationService } from '../../translation/translation.service';
 
 @Component({
   selector: 'app-catalog-card',
@@ -8,11 +9,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './catalog-card.component.html',
   styleUrl: './catalog-card.component.css'
 })
-export class CatalogCardComponent implements OnInit {
+export class CatalogCardComponent {
   @Input() item: any; 
-  ngOnInit(): void {
-    console.log(this.item);;
-  }
+  constructor(public translationService:TranslationService) { }
 
   
  

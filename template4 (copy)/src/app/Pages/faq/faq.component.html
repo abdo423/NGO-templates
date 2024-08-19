@@ -1,26 +1,25 @@
 <div class="py-4 bg-white">
-    <div class="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
-
-        <div class="text-center">
-            <p class="mt-4 text-sm leading-7 text-secondary-500 font-regular">
-                F.A.Q
-            </p>
-            <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-secondary-900">
-                Frequently Asked <span class="text-primary-600">Questions</span>
-            </h3>
-
-        </div>
-
-        <div class="mt-20">
-            <ul class="">
-              @for(faq of faqs; track $index) {
-                 <app-faq-section [faq]="faq"></app-faq-section>
-              }
-               
-            
-
-            </ul>
-        </div>
-
+  <div
+    class="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+  >
+    <div class="text-center">
+      <p class="mt-4 text-sm leading-7 text-secondary-500 font-regular">
+        {{ faqs[0].title }}
+      </p>
+      <h3
+        class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-secondary-900"
+      >
+        <span [innerHTML]="faqs[0].description"></span>
+      </h3>
     </div>
+
+    <div class="mt-20">
+      <ul>
+        <app-faq-section
+          *ngFor="let faq of faqs[0].questions; let i = index"
+          [faq]="faq"
+        ></app-faq-section>
+      </ul>
+    </div>
+  </div>
 </div>

@@ -1,28 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FaqSectionComponent } from './faq-section/faq-section.component';
-
-
+import { TranslationService } from '../../shared/translation/translation.service';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [FaqSectionComponent],
+  imports: [FaqSectionComponent,CommonModule],
   templateUrl: './faq.component.html',
-  styleUrl: './faq.component.css'
+  styleUrl: './faq.component.css',
 })
 export class FaqComponent {
-  faqs= [
-    {
-      "title": "What could possibly be your first question?",
-      "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-    },
-    {
-      "title": "What could possibly be your first question?",
-      "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-    },
-    {
-      "title": "What could possibly be your first question?",
-      "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-    }
-  ]
-  
+ faqs: any;
+  constructor( public translationsService: TranslationService) {
+    this.faqs = translationsService.getTranslation().faq;
+    
+  }
+ 
 }

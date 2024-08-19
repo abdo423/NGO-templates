@@ -1,54 +1,18 @@
- <!-- Our Values -->
- <div class="text-center mb-12">
-    <h2 class="text-3xl font-semibold mb-8">Our Values</h2>
-    <div class="flex flex-wrap justify-center">
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="mb-4">
-            <svg class="w-12 h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M12 20h9"></path>
-              <path d="M12 4v16"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Integrity</h3>
-          <p class="text-secondary-600">We operate with honesty and transparency, ensuring trust and reliability in all our dealings.</p>
+<!-- Our Values -->
+<div class="text-center mb-12">
+  <h2 class="text-3xl font-semibold mb-8">{{ sectionThree.title }}</h2>
+  <div class="flex flex-wrap justify-center">
+    <div *ngFor="let card of sectionThree.cards" class="w-full sm:w-1/2 lg:w-1/4 p-4">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <div class="mb-4">
+          <svg class="w-12 h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <!-- Dynamically set the iconPath for each card -->
+            <path [attr.d]="card.iconPath"></path>
+          </svg>
         </div>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="mb-4">
-            <svg class="w-12 h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="M12 5l7 7-7 7"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Customer Satisfaction</h3>
-          <p class="text-secondary-600">Our customers are at the heart of everything we do. We strive to exceed their expectations and deliver exceptional experiences.</p>
-        </div>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="mb-4">
-            <svg class="w-12 h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M17 20h5V4h-5"></path>
-              <path d="M2 4h15v16H2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Innovation</h3>
-          <p class="text-secondary-600">We embrace change and seek innovative solutions to continuously improve and stay ahead in our industry.</p>
-        </div>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div class="mb-4">
-            <svg class="w-12 h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="M12 5l7 7-7 7"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Teamwork</h3>
-          <p class="text-secondary-600">We believe in the power of collaboration and work together to achieve common goals and drive success.</p>
-        </div>
+        <h3 class="text-xl font-semibold mb-2">{{ card.title }}</h3>
+        <p class="text-secondary-600">{{ card.description }}</p>
       </div>
     </div>
   </div>
+</div>
