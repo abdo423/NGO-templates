@@ -17,6 +17,7 @@ import { LandingPageComponent } from './Pages/landing-page/landing-page.componen
 
 
 export const routes: Routes = [
+    //en path
     { path: '', component: LandingPageComponent, data: { showLayout: true } },
     { path: 'about', component: AboutPageComponent, data: { showLayout: true } },
     { path: 'FAQ', component: FaqComponent, data: { showLayout: true } },
@@ -26,5 +27,18 @@ export const routes: Routes = [
     { path: 'contact-us', component: ContactUsPageComponent, data: { showLayout: true } },
     { path: 'Gallery', component: GalleryPageComponent, data: { showLayout: true } },
     { path: 'Doc', component: DocumentPageComponent, data: { showLayout: true } },
+    //ar path
+    { path: 'ar', component: LandingPageComponent, data: { showLayout: true } },
+    { path: 'ar/about', component: AboutPageComponent, data: { showLayout: true } },
+    { path: 'ar/FAQ', component: FaqComponent, data: { showLayout: true } },
+    { path: 'ar/Terms', component: TermsAndCondationsComponent, data: { showLayout: true } },
+    { path: 'ar/charities', component: CatalogComponent, data: { showLayout: true } },
+    { path: 'ar/donate/:id', component: ProductComponent, data: { showLayout: true } },
+    { path: 'ar/contact-us', component: ContactUsPageComponent, data: { showLayout: true } },
+    { path: 'ar/Gallery', component: GalleryPageComponent, data: { showLayout: true } },
+    { path: 'ar/Doc', component: DocumentPageComponent, data: { showLayout: true } },
+    //not found
+    
+    { path: 'ar/**', component: NotFoundPageComponent, data: { showLayout: false } },
     { path: '**', component: NotFoundPageComponent, data: { showLayout: false } }
   ];

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { ScrollToTopComponent } from './shared/Components/scroll-to-top/scroll-to-top.component';
 import { FooterSectionThreeComponent } from './shared/Components/footer-section-three/footer-section-three.component';
+
+import { TranslationService } from './shared/translation/translation.service';
 import { NavThreeComponent } from './shared/Components/nav-three/nav-three.component';
  
 
@@ -21,4 +23,10 @@ import { NavThreeComponent } from './shared/Components/nav-three/nav-three.compo
 })
 export class AppComponent {
   // Component logic here
+  constructor(public translationService:TranslationService){}
+
+
+  
+
+ 
 }

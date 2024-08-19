@@ -1,0 +1,27 @@
+<section class="text-secondary-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-secondary-900">
+        {{ achivments.title }}
+      </h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+        {{ achivments.description }}
+      </p>
+    </div>
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full" *ngFor="let item of achivments.stats">
+        <div class="border-2 border-secondary-200 px-4 py-6 rounded-lg">
+          <svg [attr.fill]="item.icon.fill" [attr.stroke]="item.icon.stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-primary-500 w-12 h-12 mb-3 inline-block" [attr.viewBox]="item.icon.viewBox">
+            <path *ngFor="let path of item.icon.paths" [attr.d]="path"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-secondary-900">
+            {{ item.value }}
+          </h2>
+          <p class="leading-relaxed">
+            {{ item.label }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<footer class="text-secondary-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <!-- Logo Section -->
+    <a [routerLink]="translationService.getURL('/')" class="flex title-font font-medium items-center md:justify-start justify-center text-secondary-900">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-primary-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 rtl:mr-3 text-xl">{{ translationService.getTranslation().footer.logo.text }}</span>
+    </a>
+    
+    <!-- Copyright Section -->
+    <p class="text-sm text-secondary-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-secondary-200 sm:py-2 sm:mt-0 mt-4">
+      {{ translationService.getTranslation().footer.copyright }}
+    </p>
+    
+    <!-- Links Section -->
+    <p class="text-sm text-secondary-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-secondary-200 sm:py-2 sm:mt-0 mt-4">
+      <a *ngFor="let link of translationService.getTranslation().footer.links" [routerLink]="translationService.getURL(link.route)" class="mr-5 hover:text-secondary-900 cursor-pointer">
+        {{ link.text }}
+      </a>
+    </p>
+    
+    <!-- Social Media Section -->
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      @for ( social of  translationService.getTranslation().footer.socialMedia; track $index) {
+        <a [href]="social.url" class="ml-3 text-secondary-500" target="_blank" rel="noopener noreferrer">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path [attr.d]="social.svgPath"></path>
+          </svg>
+        </a>
+      }
+    
+    </span>
+  </div>
+</footer>
